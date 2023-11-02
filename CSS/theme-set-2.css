@@ -61,6 +61,7 @@ html[data-theme="light"] {
 }
 
 html[data-theme="dark"] {
+  /* Need to adjust this grey... */
   /* grey */
   --grey1: #f9fafb;
   --grey2: #f3f4f6;
