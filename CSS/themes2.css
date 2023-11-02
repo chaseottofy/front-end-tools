@@ -1,0 +1,123 @@
+html[data-theme="light"] {
+  /* grey */
+  --grey1: #060504;
+  --grey2: #0c0b09;
+  --grey3: #1a1814;
+  --grey4: #2e2a24;
+  --grey5: #635c50;
+  --grey6: #948d7f;
+  --grey7: #b4aa9c;
+  --grey8: #c8beae;
+  --grey9: #e0d6c8;
+  --grey10: #eee7d8;
+  --grey11: #fcf8ed;
+
+  /* black */
+  --black1: #f6f6f4;
+  --black2: #eaeae8;
+  --black3: #e7e7e4;
+  --black4: #d8d8d5;
+
+  /* white */
+  --white1: #000;
+  --white2: #050505;
+  --white3: #595959;
+  --white4: #5e5e55;
+  --white5: #777;
+
+  /* offset colors */
+  --offsetblack0: rgba(255, 255, 255, 0.9);
+  --offsetblack1: rgba(255, 255, 255, 0.6);
+  --offsetblack2: rgba(255, 255, 255, 0.2);
+  --offsetwhite1: rgba(0, 0, 0, 0.05);
+  --offsetwhite2: rgba(0, 0, 0, 0.1);
+  --inset1: rgba(238, 238, 238, 0.3);
+  --inset2: rgba(238, 238, 238, 0.2);
+  --bsout1: rgba(255, 255, 255, 0.2);
+  --bsout2: rgba(255, 255, 255, 0.1);
+  --bsout3: rgba(255, 255, 255, 0.2);
+  --border-color-1: var(--black4);
+  --border1: 1px solid var(--black4);
+  --placeholder1: var(--grey5);
+
+  /* box-shadow */
+  --bs-md:
+    var(--bsout1) 0 1px 2px 0,
+    var(--bsout2) 0 1px 3px 0;
+  --bs-lg:
+    0 30px 60px var(--bsout2);
+  --bs-inset1:
+    inset 0 0 10px 8px var(--inset1),
+    inset 0 0 10px 8px var(--inset2);
+
+  /* gradient */
+  --linear1: linear-gradient(0deg,
+      var(--offsetwhite1),
+      var(--offsetwhite1)),
+    radial-gradient(50% 50% at 50% 100%,
+      var(--offsetwhite2) 0%,
+      transparent 100%);
+  --linear2: linear-gradient(270deg, var(--grey10), var(--grey8), var(--grey10), var(--grey8));
+}
+
+html[data-theme="dark"] {
+  /* grey */
+  --grey1: #f9fafb;
+  --grey2: #f3f4f6;
+  --grey3: #e5e7eb;
+  --grey4: #d1d5db;
+  --grey5: #9ca3af;
+  --grey6: #6b7280;
+  --grey7: #4b5563;
+  --grey8: #374151;
+  --grey9: #1f2937;
+  --grey10: #111827;
+  --grey11: #030712;
+
+  /* black */
+  --black1: #09090b;
+  --black2: #151517;
+  --black3: #18181b;
+  --black4: #27272a;
+
+  /* white */
+  --white1: #fff;
+  --white2: #fafafa;
+  --white3: #a6a6a6;
+  --white4: #a1a1aa;
+  --white5: #888;
+
+  /* offset colors */
+  --offsetblack0: rgba(0, 0, 0, .9);
+  --offsetblack1: rgba(0, 0, 0, .6);
+  --offsetblack2: rgba(0, 0, 0, .2);
+  --offsetwhite1: rgba(255, 255, 255, .05);
+  --offsetwhite2: rgba(255, 255, 255, .1);
+  --inset1: rgba(17, 17, 17, .3);
+  --inset2: rgba(17, 17, 17, .2);
+  --bsout1: rgba(0, 0, 0, .2);
+  --bsout2: rgba(0, 0, 0, .1);
+  --bsout3: rgba(0, 0, 0, .2);
+  --border-color-1: var(--black4);
+  --border1: 1px solid var(--black4);
+  --placeholder1: var(--grey5);
+
+  /* box-shadow */
+  --bs-md:
+    var(--bsout1) 0 1px 2px 0,
+    var(--bsout2) 0 1px 3px 0;
+  --bs-lg:
+    0 30px 60px var(--bsout2);
+  --bs-inset1:
+    inset 0 0 10px 8px var(--inset1),
+    inset 0 0 10px 8px var(--inset2);
+
+  /* gradient */
+  --linear1: linear-gradient(0deg,
+      var(--offsetwhite1),
+      var(--offsetwhite1)),
+    radial-gradient(50% 50% at 50% 100%,
+      var(--offsetwhite2) 0%,
+      transparent 100%);
+  --linear2: linear-gradient(270deg, var(--grey10), var(--grey8), var(--grey10), var(--grey8));
+}
