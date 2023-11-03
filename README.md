@@ -2,7 +2,11 @@
 
 Personal collection of front-end scripts I use to process specific front-end tasks. Will add to this when I come up with more ideas.
 
-## current tools
+**third-party**
+- [compress-svg](https://jakearchibald.github.io/svgomg/)
+- [fonts](https://gwfh.mranftl.com/fonts)
+
+## tools/scripts I wrote
 1. **invert-css**
 - bulk invert css variable colors
 - I use this for converting my dark themes to light themes and vice versa.
