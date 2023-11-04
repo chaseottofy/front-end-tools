@@ -6,6 +6,7 @@ Personal collection of front-end scripts I use to process specific front-end tas
 - [compress-svg](https://jakearchibald.github.io/svgomg/)
 - [fonts](https://gwfh.mranftl.com/fonts)
 - [icons-vercel](https://vercel.com/design/icons) *easier than material-icons...*
+- [color-palette-generator](https://mycolor.space/?hex=%2309090B&sub=1)
   
 ## tools/scripts I wrote
 1. **invert-css**
