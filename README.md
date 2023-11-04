@@ -7,21 +7,18 @@ Personal collection of front-end scripts I use to process specific front-end tas
 - [fonts](https://gwfh.mranftl.com/fonts)
 - [icons-vercel](https://vercel.com/design/icons) *easier than material-icons...*
 - [color-palette-generator](https://mycolor.space/?hex=%2309090B&sub=1)
+- [read-me-github-badges](https://dev.to/envoy_/150-badges-for-github-pnk)
   
 ## tools/scripts I wrote
-1. **invert-css**
-- bulk invert css variable colors
-- I use this for converting my dark themes to light themes and vice versa.
+1. **invert-css**: Bulk invert css variable colors, I use this for converting my dark themes to light themes and vice versa.
 
 ---
 
-2. **npm-install-helper**
-- copy and paste a list of npm packages straight from a package.json file and this script will produce an npm install command.
+2. **npm-install-helper**: Copy and paste a list of npm packages straight from a package.json file and this script will produce an npm install command.
 
 ---
   
-3. **generate-html-head-w-json**
-- Generate <head> with JSON for easy templating
+3. **generate-html-head-w-json**: Generate <head> with JSON for easy templating
 
 ---
 
