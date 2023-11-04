@@ -22,8 +22,6 @@ Personal collection of front-end scripts I use to process specific front-end tas
 - This script will generate the script for you, and can recreate any web-accessible SVG file.
 - I use this whenever I make custom components that need SVGs and want to avoid innerHTML or any kind of request.
 
----
-
 5. **[generate-unique-gradients](https://codepen.io/chaseottofy/pen/BaGqJKK)**
 - **Requires a web interface to run, use the link above.**
 - Generates very abstract and unique CSS gradients. They work really well as backdrops for pattern overlays, I use [transparenttextures.com](https://www.transparenttextures.com/).
