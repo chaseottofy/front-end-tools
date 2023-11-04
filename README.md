@@ -5,7 +5,8 @@ Personal collection of front-end scripts I use to process specific front-end tas
 **third-party**
 - [compress-svg](https://jakearchibald.github.io/svgomg/)
 - [fonts](https://gwfh.mranftl.com/fonts)
-
+- [icons-vercel](https://vercel.com/design/icons) *easier than material-icons...*
+  
 ## tools/scripts I wrote
 1. **invert-css**
 - bulk invert css variable colors
