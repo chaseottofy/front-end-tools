@@ -1,0 +1,333 @@
+.base {
+  display: flex;
+  width: 100%;
+  max-width: var(--max-width-md);
+  height: 100% !important;
+  min-height: 100% !important;
+  flex-direction: column;
+  margin: 0 auto;
+  overflow-y: scroll;
+}
+
+/* BUTTONS
+===================================== */
+.btn-1,
+.btn-2,
+.btn-3,
+.btn-4,
+.btn-primary1 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--br1);
+  outline: 1px solid transparent;
+  transition-duration: var(--duration-1);
+  transition-property: color, background-color, border-color;
+  transition-timing-function: var(--bez-1);
+  white-space: nowrap;
+}
+
+.btn-1 {
+  padding: var(--p2) var(--p3);
+  border: var(--border-primary1);
+  background-color: var(--primary1);
+  color: var(--white1);
+  font-size: .875rem;
+  font-weight: 500;
+  letter-spacing: .05em;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+}
+
+.btn-2,
+.btn-3,
+.btn-4,
+.btn-primary1 {
+  padding: 0.5rem 1rem;
+  border: var(--border1);
+  color: var(--grey3);
+}
+
+.btn-2,
+.btn-3 {
+  font-size: 0.825rem;
+  font-weight: 500;
+}
+
+.btn-3,
+.btn-4 {
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+.btn-2 {
+  height: 2.5rem;
+  background-color: var(--black2);
+  line-height: 1.25rem;
+}
+
+.btn-3 {
+  height: 2.25rem;
+  background-color: transparent;
+}
+
+.btn-4 {
+  width: min-content;
+  height: 2.5rem;
+  padding: 0 2rem;
+  background-color: var(--black1);
+  font-size: .75rem;
+}
+
+.btn-primary1 {
+  width: 100%;
+  height: 2.5rem;
+  border-color: var(--secondary1);
+  margin-left: auto;
+  background-color: var(--secondary1);
+  color: #fff;
+  font-size: .85rem;
+}
+
+.btn-1:not(:disabled):hover,
+.btn-4:not(:disabled):hover {
+  border-color: var(--grey9);
+  background-color: var(--black2);
+}
+
+.btn-2:not(:disabled):hover,
+.btn-3:not(:disabled):hover {
+  background-color: var(--black2);
+}
+
+.btn-1:not(:disabled):focus-visible,
+.btn-4:not(:disabled):focus-visible {
+  border-color: var(--grey9);
+  outline: 2px solid var(--grey8) !important;
+}
+
+.btn-2:not(:disabled):focus-visible,
+.btn-3:not(:disabled):focus-visible {
+  outline: 2px solid var(--grey8) !important;
+}
+
+.btn-1:not(:disabled):active,
+.btn-2:not(:disabled):active,
+.btn-3:not(:disabled):active,
+.btn-4:not(:disabled):active {
+  border-color: var(--grey9) !important;
+  background-color: var(--grey10) !important;
+}
+
+.btn-primary1:not(:disabled):hover {
+  background-color: var(--secondary2) !important;
+}
+
+.btn-primary1:not(:disabled):focus-visible {
+  outline: 3px solid var(--secondary1-offset) !important;
+}
+
+.btn-primary1:not(:disabled):active {
+  background-color: var(--secondary3) !important;
+}
+
+/* FORM ELEMENTS
+===================================== */
+.input-1 {
+  width: 100%;
+  min-width: 100%;
+  height: 2.5rem;
+  background-color: var(--black1);
+  font-size: 0.8rem;
+  outline: 2px solid transparent;
+  transition-duration: var(--duration-1);
+  transition-property: color, background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-1:hover,
+.input-1:focus-visible {
+  outline: 2px solid var(--grey10);
+}
+
+/* .input-1:invalid, */
+.input-1[data-has-error="true"] {
+  border-color: var(--invalid2-offset);
+  outline: 2px solid var(--invalid1-offset);
+}
+
+.input-1[data-has-warn="true"] {
+  border-color: var(--warn1) !important;
+  outline: 2px solid var(--warn1-offset) !important;
+}
+
+.label-1,
+.label-2 {
+  width: 100%;
+  padding-left: 2px;
+  color: var(--grey4);
+  font-size: 0.825rem;
+  font-weight: 400;
+  line-height: 2rem;
+  pointer-events: none;
+  text-transform: capitalize;
+  user-select: none;
+}
+
+/* Checkbox
+===================================== */
+.checkbox-1 {
+  position: relative;
+  display: flex;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+
+.checkbox-1 input {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px !important;
+  margin: 0;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  opacity: 0;
+  outline: none;
+}
+
+.checkbox-1 label {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border: var(--border1);
+  border-color: var(--border-color2);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkbox-1 label span {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.checkbox-1 label span svg {
+  opacity: 0;
+}
+
+.checkbox-1 label[data-has-check="true"] {
+  border-color: var(--secondary1) !important;
+  background-color: var(--secondary1);
+}
+
+.checkbox-1 label:focus-within {
+  border-color: var(--secondary2) !important;
+  outline: 2px solid var(--secondary1-offset) !important;
+}
+
+.checkbox-1 label[data-has-check="true"] span svg {
+  fill: #fff !important;
+  opacity: 1;
+}
+
+/* SVG
+===================================== */
+.icon-xs {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* TEXT
+===================================== */
+.text-base {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.text-sm {
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.75rem
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 2.5rem;
+}
+
+/* FLEX
+===================================== */
+.flex-ac {
+  display: flex;
+  align-items: center;
+}
+
+.flex-ac-jc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* GENERAL UTILITIES
+===================================== */
+.clip-1,
+.clip-1 > * {
+  background-clip: text !important;
+  color: transparent !important;
+  -webkit-text-stroke: 0.04em var(--grey4) !important;
+  -webkit-text-stroke-width: 0.03em;
+}
+
+.body-prevent-scroll {
+  overflow: hidden;
+}
+
+.scrollbar-measure {
+  position: absolute;
+  overflow: scroll;
+  visibility: hidden;
+}
