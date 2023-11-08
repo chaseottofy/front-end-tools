@@ -1,16 +1,15 @@
 html[data-theme="light"] {
-  /* grey */
-  --grey1: #060504;
-  --grey2: #0c0b09;
-  --grey3: #1a1814;
-  --grey4: #2e2a24;
-  --grey5: #635c50;
-  --grey6: #948d7f;
-  --grey7: #b4aa9c;
-  --grey8: #c8beae;
-  --grey9: #e0d6c8;
-  --grey10: #eee7d8;
-  --grey11: #fcf8ed;
+  --grey1: #050505;
+  --grey2: #0a0a0a;
+  --grey3: #1a1a1a;
+  --grey4: #2b2b2b;
+  --grey5: #5c5c5c;
+  --grey6: #8c8c8c;
+  --grey7: #adadad;
+  --grey8: #bfbfbf;
+  --grey9: #d9d9d9;
+  --grey10: #e8e8e8;
+  --grey11: #f5f5f5;
 
   /* black */
   --black1: #f6f6f4;
@@ -25,55 +24,57 @@ html[data-theme="light"] {
   --white4: #5e5e55;
   --white5: #777;
 
+  /* specific */
+  --selection: rgb(7, 227, 212);
+  --border-color1: var(--grey8);
+  --border-color2: var(--grey7);
+  --border1: 1px solid var(--border-color1);
+  --border-primary1: 1px solid var(--secondary1);
+  --placeholder1: var(--grey5);
+
   /* offset colors */
   --offsetblack0: rgba(255, 255, 255, 0.9);
   --offsetblack1: rgba(255, 255, 255, 0.6);
-  --offsetblack2: rgba(255, 255, 255, 0.2);
+  --offsetblack2: rgba(255, 255, 255, 0.3);
   --offsetwhite1: rgba(0, 0, 0, 0.05);
   --offsetwhite2: rgba(0, 0, 0, 0.1);
   --inset1: rgba(238, 238, 238, 0.3);
   --inset2: rgba(238, 238, 238, 0.2);
-  --bsout1: rgba(255, 255, 255, 0.2);
-  --bsout2: rgba(255, 255, 255, 0.1);
+  --bsout1: rgba(0, 0, 0, .2);
+  --bsout2: rgba(0, 0, 0, .1);
   --bsout3: rgba(255, 255, 255, 0.2);
-  --border-color-1: var(--black4);
-  --border1: 1px solid var(--black4);
-  --placeholder1: var(--grey5);
-
-  /* box-shadow */
+  --bs1: 0 24px 43px 0 rgba(173, 179, 192, 0.05);
+  --bs2: 0 24px 43px 0 rgba(173, 179, 192, 0.15);
   --bs-md:
-    var(--bsout1) 0 1px 2px 0,
-    var(--bsout2) 0 1px 3px 0;
+    var(--bsout1) 0 1px 1px 0,
+    var(--bsout2) 0 2px 1px 1px;
   --bs-lg:
     0 30px 60px var(--bsout2);
   --bs-inset1:
     inset 0 0 10px 8px var(--inset1),
     inset 0 0 10px 8px var(--inset2);
-
-  /* gradient */
   --linear1: linear-gradient(0deg,
       var(--offsetwhite1),
       var(--offsetwhite1)),
     radial-gradient(50% 50% at 50% 100%,
       var(--offsetwhite2) 0%,
       transparent 100%);
-  --linear2: linear-gradient(270deg, var(--grey10), var(--grey8), var(--grey10), var(--grey8));
+  --linear2: linear-gradient(270deg, var(--grey10), var(--grey9), var(--black4), var(--grey9));
 }
 
 html[data-theme="dark"] {
-  /* Need to adjust this grey... */
   /* grey */
-  --grey1: #f9fafb;
-  --grey2: #f3f4f6;
-  --grey3: #e5e7eb;
-  --grey4: #d1d5db;
-  --grey5: #9ca3af;
-  --grey6: #6b7280;
-  --grey7: #4b5563;
-  --grey8: #374151;
-  --grey9: #1f2937;
-  --grey10: #111827;
-  --grey11: #030712;
+  --grey1: #fafafa;
+  --grey2: #f5f5f5;
+  --grey3: #e5e5e5;
+  --grey4: #d4d4d4;
+  --grey5: #a3a3a3;
+  --grey6: #737373;
+  --grey7: #525252;
+  --grey8: #404040;
+  --grey9: #262626;
+  --grey10: #171717;
+  --grey11: #0a0a0a;
 
   /* black */
   --black1: #09090b;
@@ -88,27 +89,42 @@ html[data-theme="dark"] {
   --white4: #a1a1aa;
   --white5: #888;
 
+  /* specific */
+  --selection: #f81ce5;
+  --border-color1: var(--grey9);
+  --border-color2: var(--grey7);
+  --border1: 1px solid var(--border-color1);
+  --border-primary1: 1px solid var(--secondary1);
+  --placeholder1: var(--grey5);
+
   /* offset colors */
   --offsetblack0: rgba(0, 0, 0, .9);
   --offsetblack1: rgba(0, 0, 0, .6);
-  --offsetblack2: rgba(0, 0, 0, .2);
+  --offsetblack2: rgba(0, 0, 0, .3);
   --offsetwhite1: rgba(255, 255, 255, .05);
   --offsetwhite2: rgba(255, 255, 255, .1);
   --inset1: rgba(17, 17, 17, .3);
   --inset2: rgba(17, 17, 17, .2);
-  --bsout1: rgba(0, 0, 0, .2);
-  --bsout2: rgba(0, 0, 0, .1);
+  --bsout1: rgba(0, 0, 0, .8);
+  --bsout2: rgba(0, 0, 0, .6);
   --bsout3: rgba(0, 0, 0, .2);
-  --border-color-1: var(--black4);
-  --border1: 1px solid var(--black4);
-  --placeholder1: var(--grey5);
+  --bsout4: rgba(5, 5, 6, 0.6);
 
   /* box-shadow */
+  --bs1: 
+      0 16px 34px var(--bsout2);
+
+      /* 0 24px 43px 0 rgba(82, 76, 63, 0.05); */
+
+      /* var(--bsout1) 0 1px 1px 0, */
+
+      /* var(--bsout2) 0 2px 1px 1px; */
+  --bs2: 0 24px 43px 0 rgba(82, 76, 63, 0.15);
   --bs-md:
     var(--bsout1) 0 1px 2px 0,
     var(--bsout2) 0 1px 3px 0;
   --bs-lg:
-    0 30px 60px var(--bsout2);
+    0 20px 40px var(--bsout2);
   --bs-inset1:
     inset 0 0 10px 8px var(--inset1),
     inset 0 0 10px 8px var(--inset2);
@@ -120,5 +136,5 @@ html[data-theme="dark"] {
     radial-gradient(50% 50% at 50% 100%,
       var(--offsetwhite2) 0%,
       transparent 100%);
-  --linear2: linear-gradient(270deg, var(--grey10), var(--grey8), var(--grey10), var(--grey8));
+  --linear2: linear-gradient(270deg, var(--grey10), var(--grey9), var(--black4), var(--grey9));
 }
