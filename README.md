@@ -9,6 +9,7 @@ Personal collection of front-end scripts I use to process specific front-end tas
 - [color-palette-generator](https://mycolor.space/?hex=%2309090B&sub=1)
 - [read-me-github-badges](https://github.com/Ileriayo/markdown-badges)
 - [SVG-base-64](https://easy64.org/svg-editor/)
+- [font-fallback](https://screenspan.net/fallback)
   
 ## mine
 1. **invert-css**: Bulk invert css variable colors, I use this for converting my dark themes to light themes and vice versa.
