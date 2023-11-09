@@ -1,3 +1,22 @@
+/*
+@fileoverview:
+- Layout
+- Buttons
+- Form Elements
+  - Input
+  - Label
+- SVG
+- Text
+- Flex
+- General Utilities
+- Transition Utilities
+- Popup Utilities
+- ID Specific, Project Specific
+*/
+
+/* LAYOUT
+=============================================== */
+
 .base {
   display: flex;
   width: 100%;
@@ -9,13 +28,19 @@
   overflow-y: scroll;
 }
 
-/* BUTTONS
-===================================== */
+/* BUTTONS: 
+- specifically made to be compatible with forms
+- and in combination with a few data attributes like:
+1. data-has-error=boolean
+2. data-has-warn=boolean
+3. data-has-check=boolean
+=============================================== */
 .btn-1,
 .btn-2,
 .btn-3,
 .btn-4,
-.btn-primary1 {
+.btn-primary1,
+.btn-icon1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -90,13 +115,11 @@
 }
 
 .btn-1:not(:disabled):hover,
-.btn-4:not(:disabled):hover {
-  border-color: var(--grey9);
-  background-color: var(--black2);
-}
-
 .btn-2:not(:disabled):hover,
-.btn-3:not(:disabled):hover {
+.btn-3:not(:disabled):hover,
+.btn-4:not(:disabled):hover,
+.btn-icon1:not(:disabled):hover {
+  border-color: var(--grey9);
   background-color: var(--black2);
 }
 
@@ -175,7 +198,25 @@
 }
 
 /* Checkbox
-===================================== */
+To construct a custom checkbox, use the following markup:
+- Note that the label text 'txt' is not visible, but I've found
+that in most cases, not having any text at all causes the label
+to not be 'associated' with the input. So add some text, but make
+it short and sweet since it technically still affects layout.
+<div className='checkbox-1'>
+  txt
+  <label htmlFor='checkboxInput' data-has-check={checkState}>
+    <input 
+      aria-checked={checkState}
+      aria-labelledby='remember'
+      checked={checkState}
+      id='checkboxInput'
+      type='checkbox'
+      onClick={() => setCheckState((prev) => !prev)}
+    />
+  </label>
+</div>
+============================================================= */
 .checkbox-1 {
   position: relative;
   display: flex;
@@ -197,13 +238,15 @@
   background-color: transparent;
   cursor: pointer;
   opacity: 0;
-  outline: none;
+
+  /* outline: none; */
 }
 
 .checkbox-1 label {
   position: relative;
   z-index: 4;
   display: flex;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   align-items: center;
@@ -211,6 +254,13 @@
   border: var(--border1);
   border-color: var(--border-color2);
   border-radius: 5px;
+
+  /* checkbox check svg converted to data uri */
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBzdHJva2U9IndoaXRlIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgaGVpZ2h0PSIxZW0iIHdpZHRoPSIxZW0iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZS13aWR0aD0iMiIgcG9pbnRzPSI2IDEzIDEwLjIgMTYuNiAxOCA3Ij48L3BvbHlsaW5lPjwvc3ZnPg==");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+  color: transparent !important;
   cursor: pointer;
 }
 
@@ -226,6 +276,17 @@
 
 .checkbox-1 label span svg {
   opacity: 0;
+}
+
+.checkbox-1 label[data-has-check="false"]::after {
+  position: absolute;
+  z-index: 1002;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black1);
+  content: '';
 }
 
 .checkbox-1 label[data-has-check="true"] {
@@ -248,6 +309,8 @@
 .icon-xs {
   width: 1rem;
   height: 1rem;
+  pointer-events: none;
+  user-select: none;
 }
 
 /* TEXT
@@ -330,4 +393,41 @@
   position: absolute;
   overflow: scroll;
   visibility: hidden;
+}
+
+/* TRANSITION UTILITIES
+===================================== */
+[data-disable-transitions="true"] * {
+  animation: none !important;
+  transition: none !important;
+  transition-duration: none !important;
+  transition-property: none !important;
+  transition-timing-function: none !important;
+}
+
+/* POPUP UTILITIES
+===================================== */
+[data-active-popup="false"] {
+  z-index: -1 !important;
+  top: 0;
+  left: 0;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 200ms ease-in-out;
+  user-select: none !important;
+  visibility: hidden !important;
+}
+
+[data-active-popup="true"] {
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 200ms ease-in-out;
+  user-select: auto;
+  visibility: visible;
 }
