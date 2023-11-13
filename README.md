@@ -28,3 +28,5 @@ Personal collection of front-end scripts I use to process specific front-end tas
 - **Requires a web interface to run, use the link above.**
 - Generates very abstract and unique CSS gradients. They work really well as backdrops for pattern overlays, I use [transparenttextures.com](https://www.transparenttextures.com/).
 - Copy to clipboard css
+
+6. **[Prettify-SVG-In-Bulk](https://github.com/chaseottofy/bulk-svg-prettify)** : CLI package to prettify SVG directory
