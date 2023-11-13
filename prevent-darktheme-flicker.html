@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<script>
+  !function () {
+    try {
+      var d = document.documentElement,
+        n = 'data-theme',
+        s = 'setAttribute';
+      var e = localStorage.getItem('theme');
+      if (e) {
+        d[s](n, e || '');
+      } else {
+        d[s](n, 'dark');
+      }
+
+      if (e === 'light' || e === 'dark' || !e) d.style.colorScheme = e || 'dark';
+
+    } catch (t) {
+    }
+  }();
+</script>
+
+<body>
+
+</body>
+
+</html>
