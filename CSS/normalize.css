@@ -14,41 +14,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Mozilla_Extensions
 
 */
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  padding: 0;
-  border: 0;
-  margin: 0;
-}
-
-html {
-  font-feature-settings: normal;
-  font-size: 18px;
-  font-variation-settings: normal;
-  line-height: 1.15;
-  tab-size: 4;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-}
-
-body {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  background-color: var(--black1);
-  color: var(--white1);
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 400;
-  line-height: inherit;
-  -webkit-tap-highlight-color: transparent;
-  text-rendering: geometricprecision;
-}
-
 main {
   display: block
 }
@@ -62,6 +27,10 @@ hr {
   overflow: visible;
   height: 0;
   box-sizing: content-box
+}
+
+br {
+  margin-bottom: .25rem;
 }
 
 pre {
@@ -162,12 +131,43 @@ template {
   display: none
 }
 
+svg {
+  pointer-events: none;
+  user-select: none;
+  min-width: .875rem;
+  min-height: .875rem;
+}
+
 h1,
 h2,
 h3,
 h4 {
   font-size: inherit;
   font-weight: inherit
+}
+
+h1,
+h2,
+h3,
+h4,
+nav,
+ul,
+main,
+header,
+button,
+input,
+select,
+textarea,
+a,
+p,
+li,
+div,
+span,
+label,
+strong,
+small,
+b {
+  font-family: var(--inter);
 }
 
 button,
@@ -179,9 +179,17 @@ textarea {
   border-radius: var(--br1);
   margin: 0;
   color: inherit;
-  font-family: inherit;
   font-size: 100%;
-  line-height: 1.15
+  line-height: 1.15;
+}
+
+button,
+input,
+button svg,
+input svg {
+  transition-duration: var(--duration-1);
+  transition-property: color, background-color, border-color;
+  transition-timing-function: var(--bez-1);
 }
 
 button,
@@ -216,11 +224,9 @@ button::-moz-focus-inner {
 
 input:not([type="checkbox"]),
 input:not([type="radio"]) {
-  max-width: 320px;
+  /* max-width: 320px; */
   margin: 0;
   line-height: 1.15;
-
-  /* outline: none */
 }
 
 input:not([type="checkbox"]),
@@ -266,10 +272,14 @@ img {
 
 a > img,
 button > img,
-span > img,
-svg {
+span > img {
   pointer-events: none;
   user-select: none
+}
+
+
+a:hover {
+  color: var(--link-hover);
 }
 
 input::placeholder,
@@ -283,7 +293,14 @@ button:focus-visible,
 input:focus-visible,
 label:focus-visible,
 textarea:focus-visible {
-  outline: 1px dotted var(--white1)
+  outline: 1.5px dotted var(--grey5);
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px var(--black2) inset !important;
+  -webkit-text-fill-color: var(--white1) !important;
 }
 
 ::selection {
